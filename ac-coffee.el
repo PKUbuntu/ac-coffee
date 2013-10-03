@@ -11,12 +11,22 @@
     
     ;; Coffee-Keywords
     "undefined"  "then"  "unless"  "until"  "loop"  "of"  "by"  "when"
+
     )
 
   "List of coffee keywords.")
 
+(defconst coffee-lexer-command
+  "coffee-lexer")
+
+
+(defun run-coffee-lexer (file_path)
+  (split-string (shell-command-to-string (concat coffee-lexer-command " " file_path)) "\n")
+)
+
 (defun make-coffee-candidates () 
-  ac-coffee-keywords)
+  (append (run-coffee-lexer buffer-file-name) ac-coffee-keywords)
+)
 
 (defun ac-coffee-start-of-expression ()
   "Return point of the start of coffee expression at point.
