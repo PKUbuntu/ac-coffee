@@ -35,9 +35,9 @@ try
 catch error
         console.error "Lexer: #{error}"
         process.exit(1)
-
+        
 # output
 for id in ID
         console.log id
-
-
+        
+        
