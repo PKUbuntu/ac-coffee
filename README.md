@@ -9,13 +9,14 @@ Requirements
 * Node.js
 * Coffee
 * Emacs 24+
+* auto-complete
 
 Installation
 --------
 
-0. Wait for me to complete my work
 1. Clone this repo
-2. Configure ```.emacs```
+2. In repo director, run ```npm install coffee```
+3. Configure ```.emacs```
 
 ```lisp
 ;; My Coffee AC Source
