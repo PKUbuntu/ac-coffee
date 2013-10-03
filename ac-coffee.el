@@ -45,6 +45,9 @@ Assumes symbol can be alphanumeric, '.' or '_' or TODO: '@', '('"
 
 (add-hook 'coffee-mode-hook
           '(lambda ()             
-             (set (make-local-variable 'ac-sources) (append ac-sources '(ac-source-coffee)))))
+             (set (make-local-variable 'ac-sources) (append ac-sources '(ac-source-coffee)))
+             (auto-complete-mode t)
+             )
+)
 
 (provide 'ac-coffee)
