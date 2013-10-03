@@ -23,4 +23,4 @@ Installation
 (require 'ac-coffee)
 ```
 
-3. Done!
+Done!
