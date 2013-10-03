@@ -14,9 +14,7 @@ argn = process.argv.length
 file_path = ""
 if argn != 3
         console.error "Lexer: No file name"
-        # for debug, remove later
-        file_path = process.argv[1]
-        # process.exit(1)
+        process.exit(1)
 else
         file_path = process.argv[2]
 
