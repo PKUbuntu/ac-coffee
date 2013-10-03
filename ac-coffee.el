@@ -12,6 +12,8 @@
     ;; Coffee-Keywords
     "undefined"  "then"  "unless"  "until"  "loop"  "of"  "by"  "when"
 
+    ;; Other handy keywords
+    "constructor"
     )
 
   "List of coffee keywords.")
@@ -21,7 +23,24 @@
 
 
 (defun run-coffee-lexer (file_path)
-  (split-string (shell-command-to-string (concat coffee-lexer-command " " file_path)) "\n")
+  (let (
+	(result nil)
+	(lines nil)
+	(split-first-line nil)
+     	)
+    (setq result (shell-command-to-string (concat coffee-lexer-command " " file_path)))
+    (setq lines (split-string result "\n"))
+    (setq split-first-line (split-string (nth 0 lines) ":"))
+    (if (equal (length split-first-line) 2)
+	(
+	 ;; Show error
+	 (message (nth 1 split-first-line))
+	 ;; Empty list
+	 (list)
+	 )
+      lines
+	)
+  )
 )
 
 (defun make-coffee-candidates () 

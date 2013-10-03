@@ -19,17 +19,25 @@ else
         file_path = process.argv[2]
 
 
-code = fs.readFileSync(file_path, 'utf-8')
+try
+        code = fs.readFileSync(file_path, 'utf-8')
+catch error
+        console.error "Lexer: #{error}"
+        process.exit(1)
 
 # Get all identifiers
-ID = []
-for token in lexer.tokenize(code)
-        if token[0] == "IDENTIFIER"
-                if token[1] not in ID
-                        ID.push token[1]
-
+try
+        ID = []
+        for token in lexer.tokenize(code)
+                if token[0] == "IDENTIFIER"
+                        if token[1] not in ID
+                                ID.push token[1]
+catch error
+        console.error "Lexer: #{error}"
+        process.exit(1)
+        
 # output
 for id in ID
         console.log id
-
-
+        
+        
