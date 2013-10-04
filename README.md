@@ -7,6 +7,8 @@ Current version uses a simple laxer-based approach and provides little informati
 That's enough for most common usage. 
 The next version will be grammar-based.
 
+![Snapshot](http://project.catx.me/ac-coffee/snapshot.png "ac-coffee")
+
 Requirements
 --------
 
