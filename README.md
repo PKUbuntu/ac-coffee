@@ -21,13 +21,13 @@ Known Issues
 -------
 
 * Current version doesn't provide scope information yet, which means suggestions is made only by token name.
-* Does not start completion on ```.```. 
+* Does not start completion on ```.```.
 
 Installation
 --------
 
 1. Clone this repo
-2. In repo folder, run ```npm install coffee-script```
+2. ~~In repo folder, run ```npm install coffee-script```~~ (node_modules folder already included in repo)
 3. Configure ```.emacs```
 
 ```lisp
