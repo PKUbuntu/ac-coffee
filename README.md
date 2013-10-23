@@ -17,6 +17,12 @@ Requirements
 * Emacs 24+
 * auto-complete
 
+Known Issues
+-------
+
+* Current version doesn't provide scope information yet, which means suggestions is made only by token name.
+* Does not start completion on ```.```. 
+
 Installation
 --------
 
