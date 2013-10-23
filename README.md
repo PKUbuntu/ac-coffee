@@ -21,7 +21,7 @@ Installation
 --------
 
 1. Clone this repo
-2. In repo folder, run ```npm install coffee```
+2. In repo folder, run ```npm install coffee-script```
 3. Configure ```.emacs```
 
 ```lisp
