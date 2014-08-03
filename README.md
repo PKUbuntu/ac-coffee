@@ -9,6 +9,12 @@ The next version will be grammar-based.
 
 ![Snapshot](http://project.catx.me/ac-coffee/snapshot.png "ac-coffee")
 
+
+Status
+--------
+
+I moved on to Atom Editor. This project is no longer under maintenance.
+
 Requirements
 --------
 
